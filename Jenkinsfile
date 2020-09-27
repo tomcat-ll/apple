@@ -1,12 +1,13 @@
 pipeline {
     agent any
     //项目名
-    def project_name = 'apple'
+    environment{
+     project_name = 'apple'
     //仓库地址
-    def github = 'https://github.com/tomcat-ll/apple.git'
+     github = 'https://github.com/tomcat-ll/apple.git'
     //jenkins远程服务器
-    def server_name = '103_server'
-    def sever_port = '10001'
+     server_name = '103_server'
+     sever_port = '10001'}
     stages {
         stage(‘pipeline开始拉取‘) {
         steps{
