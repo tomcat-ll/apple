@@ -12,7 +12,7 @@ pipeline {
         stage(‘pipeline开始拉取‘) {
         steps{
                   echo "开始拉取"
-                 checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '2938767e-a4c5-43e7-928c-cee7103b3121', url: "${github}"]]])
+                 checkout([$class: 'GitSCM', branches: [[name: '*/'+env.BRANCH_NAME]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'b1ef8492-1493-4a99-bc34-128736e69203', url: "${github}"]]])
 
         }
         }
